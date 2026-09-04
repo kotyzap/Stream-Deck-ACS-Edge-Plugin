@@ -2,13 +2,15 @@
 
 A Stream Deck plugin for **AXIS Camera Station Edge** — recording playback, PTZ and view controls on physical keys. Works with the web app (acs.mysystems.axis.com) and the Windows desktop client; macOS and Windows.
 
-**[Website](https://kotyzap.github.io/Stream-Deck-ACS-Edge-Plugin/) · [Download plugin](dist/com.4xsdev.acs-edge.streamDeckPlugin)**
+**[Website](https://kotyzap.github.io/Stream-Deck-ACS-Edge-Plugin/) · [Download plugin](dist/com.4xsdev.acs-edge-kofi.streamDeckPlugin)**
+
+Two builds of the same plugin (same UUID, either updates the other): the GitHub download above adds a **Buy me a Ko-fi** key; the Elgato Marketplace build (`dist/com.4xsdev.acs-edge.streamDeckPlugin`) leaves it out, as Marketplace guidelines forbid sponsor links inside plugins.
 
 ![Default profile](docs/img/deck.png)
 
 ## Install
 
-Download [`com.4xsdev.acs-edge.streamDeckPlugin`](dist/com.4xsdev.acs-edge.streamDeckPlugin) (or install from the Elgato Marketplace) and double-click it. Stream Deck adds the **ACS Edge Deck** action group and a ready-made profile for your device — **ACS Edge** (15 keys), **ACS Edge Mini** (3×2) or **ACS Edge XL** (8×4).
+Download [`com.4xsdev.acs-edge-kofi.streamDeckPlugin`](dist/com.4xsdev.acs-edge-kofi.streamDeckPlugin) (or install from the Elgato Marketplace) and double-click it. Stream Deck adds the **ACS Edge Deck** action group and a ready-made profile for your device — **ACS Edge** (15 keys), **ACS Edge Mini** (3×2) or **ACS Edge XL** (8×4).
 
 Requirements: Stream Deck software 6.9+, macOS 12+ or Windows 10+, AXIS Camera Station Edge. On macOS the Stream Deck app needs Accessibility permission to send keystrokes (it already has it if you use Elgato's Hotkey action).
 
@@ -51,4 +53,4 @@ npx @elgato/cli pack plugin/com.4xsdev.acs-edge.sdPlugin -o dist
 
 ## License
 
-MIT — Pavel Kotyza · [4xs.dev](https://www.4xs.dev). Independent project; not affiliated with Axis Communications or Elgato. AXIS is a trademark of Axis AB.
+MIT — Pavel Kotyza · [4xs.dev](https://www.4xs.dev). Free and open source; if it saves you clicks, [buy me a Ko-fi](https://ko-fi.com/K3K6RR4LY). Independent project; not affiliated with Axis Communications or Elgato. AXIS is a trademark of Axis AB.

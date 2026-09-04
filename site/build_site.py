@@ -7,7 +7,7 @@ from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 REPO = "https://github.com/kotyzap/Stream-Deck-ACS-Edge-Plugin"
-DL = f"{REPO}/raw/main/dist/com.4xsdev.acs-edge.streamDeckPlugin"
+DL = f"{REPO}/raw/main/dist/com.4xsdev.acs-edge-kofi.streamDeckPlugin"
 ACS_DOCS = "https://help.axis.com/en-us/axis-camera-station-edge"
 
 # Key order for the actions sheet: playback · PTZ · view · open
@@ -63,6 +63,10 @@ td:last-child{color:var(--fg2)}
 footer{padding:36px 0 48px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--fg2)}
 footer a{color:var(--fg2)}footer a:hover{color:var(--fg)}
 @media (max-width:820px){.decks{grid-template-columns:1fr}.hero{grid-template-columns:1fr;padding-top:24px}.hero h1{font-size:38px}.grid3,.flow{grid-template-columns:1fr}.navlinks span{display:none}}
+
+.cardlink{display:block;text-decoration:none;color:inherit;transition:border-color .15s}
+.cardlink:hover{border-color:var(--accent)}
+.cardlink h3{color:var(--fg)}
 """
 
 GH_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>'
@@ -84,7 +88,7 @@ BODY = f"""
         <a class="btn" href="{DL}">{DL_ICON}Download plugin</a>
         <a class="btn ghost" href="{REPO}">Source on GitHub</a>
       </div>
-      <p class="meta" style="margin-top:16px">macOS 12+ · Windows 10+ · Stream Deck 6.9+ · one-click install with a ready profile for Mini, MK.2 and XL. Free and open source (MIT). Also on the Elgato Marketplace.</p>
+      <p class="meta" style="margin-top:16px">macOS 12+ · Windows 10+ · Stream Deck 6.9+ · one-click install with a ready profile for Mini, MK.2 and XL. Free and open source (MIT). Also on the Elgato Marketplace; this GitHub build adds a <a href="https://ko-fi.com/K3K6RR4LY">Buy me a Ko-fi</a> key.</p>
     </div>
     <img src="img/hero-decks.png" width="1600" height="1434" alt="The three bundled profiles on Stream Deck XL, MK.2 and Mini: playback, PTZ and view keys for ACS Edge">
   </div>
@@ -135,8 +139,21 @@ BODY = f"""
     <p class="meta" style="margin-top:24px">Limits: keystrokes only reach the front window — the plugin cannot tell whether ACS Edge is focused. The Windows path follows Axis's documented shortcuts but has not been tested on Windows hardware yet; reports welcome via <a href="{REPO}/issues">GitHub issues</a>.</p>
   </section>
 
+
+  <section id="more">
+    <div class="eyebrow">More from 4xs.dev</div>
+    <h2>Other Stream Deck plugins.</h2>
+    <p class="lead">Physical keys for the tools you already use. All free and open source.</p>
+    <div class="grid3">
+      <a class="card cardlink" href="https://kotyzap.github.io/Stream-Deck-Claude-Plugin/"><h3>Deck for Claude ↗</h3><p>Answer permission prompts, replies, shortcuts & status for the Claude desktop app</p></a>
+      <a class="card cardlink" href="https://github.com/kotyzap/Stream-Deck-Axis-Cam-CamStreamer-Plugin"><h3>Camera Deck for Axis &amp; CamStreamer ↗</h3><p>PTZ, presets, overlays and CamStreamer/CamSwitcher control for Axis cameras</p></a>
+      <a class="card cardlink" href="https://kotyzap.github.io/Stream-Deck-ACS-Pro-Plugin/"><h3>Deck for AXIS Camera Station Pro &amp; 5 ↗</h3><p>Playback, cameras, PTZ presets and any hotkey for ACS 5 &amp; Pro</p></a>
+      <a class="card cardlink" href="https://kotyzap.github.io/Stream-Deck-Genetec-Plugin/"><h3>Deck for Genetec Security Desk ↗</h3><p>Playback, alarms, tiles, PTZ, doors and any camera by logical ID for Security Desk</p></a>
+    </div>
+  </section>
+
   <footer>
-    <div>Pavel Kotyza · <a href="https://www.4xs.dev">4xs.dev</a> · MIT License</div>
+    <div>Pavel Kotyza · <a href="https://www.4xs.dev">4xs.dev</a> · MIT License · <a href="https://ko-fi.com/K3K6RR4LY">Buy me a Ko-fi</a></div>
     <div>Independent project; not affiliated with Axis Communications or Elgato. AXIS is a trademark of Axis AB.</div>
   </footer>
 </div>
