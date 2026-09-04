@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script></head>
+<body>
+<sdpi-item label="Command">
+  <sdpi-select setting="command" default="play">
+    <optgroup label="Playback">
+      <option value="prev">Previous recording (J)</option>
+      <option value="back">Back 0.5 s (←)</option>
+      <option value="play">Play / pause (Space)</option>
+      <option value="fwd">Forward 0.5 s (→)</option>
+      <option value="next">Next recording (L)</option>
+    </optgroup>
+    <optgroup label="PTZ (desktop client)">
+      <option value="zoom-in">Zoom in (Ctrl +)</option>
+      <option value="zoom-out">Zoom out (Ctrl −)</option>
+      <option value="tilt-up">Tilt up (Ctrl ↑)</option>
+      <option value="tilt-down">Tilt down (Ctrl ↓)</option>
+      <option value="pan-left">Pan left (Ctrl ←)</option>
+      <option value="pan-right">Pan right (Ctrl →)</option>
+    </optgroup>
+    <optgroup label="View">
+      <option value="details">Stream details (Ctrl I)</option>
+      <option value="debug">Copy debug info (Ctrl Alt D)</option>
+      <option value="help">Show shortcuts (?)</option>
+    </optgroup>
+  </sdpi-select>
+</sdpi-item>
+<sdpi-item label="">
+  <small>The shortcut is sent to whichever window is in front — click into AXIS Camera Station Edge first, or use the Open ACS Edge key.</small>
+</sdpi-item>
+</body></html>

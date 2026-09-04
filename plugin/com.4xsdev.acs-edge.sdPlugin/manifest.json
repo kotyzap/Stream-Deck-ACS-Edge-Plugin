@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Name": "Deck for AXIS Camera Station Edge",
+  "Version": "1.0.0.0",
+  "Author": "Pavel Kotyza",
+  "Description": "Playback, PTZ and view controls for AXIS Camera Station Edge (web app or Windows client) on Stream Deck keys: previous / next recording, ±0.5 s, play / pause, zoom, pan / tilt, stream details. Ready-made profiles for Stream Deck, Mini and XL. Independent project, not affiliated with Axis Communications or Elgato. https://www.4xs.dev",
+  "UUID": "com.4xsdev.acs-edge",
+  "Icon": "imgs/plugin/marketplace",
+  "Category": "Deck for AXIS Camera Station Edge",
+  "CategoryIcon": "imgs/plugin/category",
+  "CodePath": "bin/plugin.js",
+  "SDKVersion": 3,
+  "Software": {
+    "MinimumVersion": "6.9"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "12"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20"
+  },
+  "Profiles": [
+    {
+      "Name": "ACS Edge",
+      "DeviceType": 0,
+      "Readonly": false,
+      "AutoInstall": true
+    },
+    {
+      "Name": "ACS Edge Mini",
+      "DeviceType": 1,
+      "Readonly": false,
+      "AutoInstall": true
+    },
+    {
+      "Name": "ACS Edge XL",
+      "DeviceType": 2,
+      "Readonly": false,
+      "AutoInstall": true
+    }
+  ],
+  "Actions": [
+    {
+      "Name": "ACS Edge Command",
+      "UUID": "com.4xsdev.acs-edge.command",
+      "Icon": "imgs/actions/command/icon",
+      "Tooltip": "Sends one AXIS Camera Station Edge keyboard shortcut to the focused window: previous / next recording, ±0.5 s, play / pause, zoom, pan / tilt, stream details, debug info, shortcut help.",
+      "Controllers": [
+        "Keypad"
+      ],
+      "PropertyInspectorPath": "ui/command.html",
+      "SupportedInMultiActions": true,
+      "DisableAutomaticStates": true,
+      "States": [
+        {
+          "Image": "imgs/actions/command/key",
+          "TitleAlignment": "middle",
+          "ShowTitle": false
+        }
+      ]
+    },
+    {
+      "Name": "Open ACS Edge",
+      "UUID": "com.4xsdev.acs-edge.open",
+      "Icon": "imgs/actions/open/icon",
+      "Tooltip": "Opens AXIS Camera Station Edge — the web app (acs.mysystems.axis.com) by default, or any URL you set.",
+      "Controllers": [
+        "Keypad"
+      ],
+      "PropertyInspectorPath": "ui/open.html",
+      "SupportedInMultiActions": true,
+      "DisableAutomaticStates": true,
+      "States": [
+        {
+          "Image": "imgs/actions/open/key",
+          "TitleAlignment": "middle",
+          "ShowTitle": false
+        }
+      ]
+    }
+  ]
+}
